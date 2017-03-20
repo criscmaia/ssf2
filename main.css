@@ -1,0 +1,33 @@
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 33.333% [columns]);
+    grid-template-rows: repeat(2, 1fr [rows]);
+    grid-template-areas:
+        "video calendar info"
+        "video calendar info"
+}
+
+.grid-container {
+    display: grid;
+}
+
+#video-cell {
+    background-color: #444;
+    grid-area: video;
+}
+
+#calendar-cell {
+    background-color: #777;
+    grid-area: calendar;
+}
+
+#calendar-cell iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#info-cell {
+    background-color: #999;
+    grid-area: info;
+}
