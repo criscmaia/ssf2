@@ -1,3 +1,8 @@
+body {
+    background-image: url(imgs/SFF_tea-stain-background_plain-square.png);
+    background-size: cover;
+}
+
 .container {
     height: 100vh;
     background-image: url(imgs/SFF_full-map_for-use-on-tea-stain-bg.png);
@@ -6,16 +11,42 @@
     background-position: center center;
 }
 
-.stamps {
-    padding: 50px 0 0 150px;
+.cssclear {
+    clear: both;
 }
 
 .stamp {
-    width: 400px;
-    float: left;
-    padding-right: 20px;
+    width: 800px;
 }
 
-.cssclear {
-    clear: both;
+.forest {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 80px;
+    padding-top: 40px;
+}
+
+.volcano {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 80px;
+    padding-top: 40px;
+}
+
+.waterfall {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 80px;
+    padding-bottom: 40px;
+}
+
+.castle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 80px;
+    padding-bottom: 40px;
 }
