@@ -7,17 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link href="reset.css" rel="stylesheet" type='text/css'>
     <link href="main.css" rel="stylesheet" type='text/css'>
+
+    <script>
+        $(document).ready(function() {
+            var volcanoDialog = $('#volcano-modal').dialog({
+                draggable: false,
+                resizable: false,
+                height: 400,
+                width: 500,
+                autoOpen: false,
+                // hook to the 'beforeclose' event instead of 'close'
+                beforeclose: function(event, ui) {
+                    volcanoDialog.dialog('widget').effect('transfer', {
+                        to: '.volcano',
+                        className: 'ui-effects-transfer'
+                    }, 1500, null);
+                    return true; // to close it
+                }
+            });
+
+            $(".volcanoModal").hover(function() {
+                //in
+                volcanoDialog.dialog('open');
+
+                $(this).effect('transfer', {
+                    to: volcanoDialog.dialog('widget'),
+                    className: 'ui-effects-transfer'
+                }, 500, null);
+            }, function() {
+                //out
+                volcanoDialog.dialog('close');
+            });
+        });
+    </script>
 </head>
 
 <body>
+
+    <div id="volcano-modal" title="Volcano Zone (Progression and Support, Registry)">
+        <p>Join us in the VOLCANO ZONE to learn more about Progression & Support and Registry and how they can help you! In the Volcano Zone you will find • Help and advice to avoiding 'erupting' with anxiety • Tips on progression • Advice on deferral, academic conduct and MDX rules Representatives from Progression and Support and Registry will be on hand throughout the festival with advice, tips, games and free gifts to help you achieve your very best with at Middlesex and beyond!
+        </p>
+    </div>
+
     <div class="bkg">
         <div class="container">
-            <img class="stamp volcano" src="imgs/volcano_stamp.png">
-            <img class="stamp forest" src="imgs/forest_stamp.png">
-            <img class="stamp waterfall" src="imgs/waterfall_stamp.png">
-            <img class="stamp castle" src="imgs/castle_stamp.png">
+            <div class="volcanoModal">
+                <img class="stamp volcano" src="imgs/volcano_stamp.png">
+            </div>
+            <div>
+                <img class="stamp forest" src="imgs/forest_stamp.png">
+            </div>
+            <div>
+                <img class="stamp waterfall" src="imgs/waterfall_stamp.png">
+            </div>
+            <div>
+                <img class="stamp castle" src="imgs/castle_stamp.png">
+            </div>
         </div>
     </div>
 </body>

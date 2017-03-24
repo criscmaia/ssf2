@@ -55,3 +55,14 @@ body {
     padding-right: 80px;
     padding-bottom: 40px;
 }
+
+
+/*POP UP*/
+
+.no-close .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.ui-effects-transfer {
+    border: 2px dotted red;
+}
