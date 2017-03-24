@@ -12,10 +12,14 @@ body {
 }
 
 .container img {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
     opacity: 1;
 }
 
 .container:hover img {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
     opacity: .5;
 }
 
