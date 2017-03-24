@@ -3,6 +3,10 @@ body {
     background-size: cover;
 }
 
+.boldit {
+    font-weight: bold;
+}
+
 .bkg {
     height: 100vh;
     background-image: url(imgs/SFF_full-map_for-use-on-tea-stain-bg.png);
@@ -59,10 +63,40 @@ body {
 
 /*POP UP*/
 
+/* hide X to close window */
 .no-close .ui-dialog-titlebar-close {
     display: none;
 }
 
-.ui-effects-transfer {
-    border: 2px dotted red;
+.modal-content {
+    float: left;
+}
+.modal-img {
+/*
+    position: relative;
+    bottom: 0;
+    right: 0;
+*/
+    width: 300px;
+    height: auto;
+    float: right
+}
+
+/*header*/
+.ui-dialog .ui-dialog-titlebar {
+    padding: .4em 1em;
+    position: relative;
+    border: 1px solid #336666;
+    background: #D7BCA6 50% 50% repeat-x;
+}
+
+/* overall style */
+.dialogStyle {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1.8em;
+    background-color: #F8F3EE;
+}
+
+.dialogStyle h1 {
+    font-size: 2em;
 }
