@@ -31,7 +31,7 @@
                 // hook to the 'beforeclose' event instead of 'close'
                 beforeclose: function(event, ui) {
                     volcanoDialog.dialog('widget').effect('transfer', {
-                        to: '.volcano',
+                        to: '.volcanoModal',
                         className: 'ui-effects-transfer'
                     }, 1500, null);
                     return true; // to close it
@@ -42,11 +42,17 @@
                 volcanoDialog.dialog('open');
 
                 $(this).effect('transfer', {
-                    to: volcanoDialog.dialog('widget'),
+//                    to: volcanoDialog.dialog('widget'),
+                    to: '.volcanoModal',
                     className: 'ui-effects-transfer'
-                }, 500, null);
+                }, 1500, null);
             }, function() {
-                volcanoDialog.dialog('close');
+                $(this).effect('transfer', {
+                    to: '.volcanoModal',
+                    className: 'ui-effects-transfer'
+                }, 1500, null);
+
+                window.setTimeout(volcanoDialog.dialog('close'), 1500);
             });
             // END - volcano dialog
 
@@ -82,7 +88,7 @@
                 $(this).effect('transfer', {
                     to: castleDialog.dialog('widget'),
                     className: 'ui-effects-transfer'
-                }, 500, null);
+                }, 1500, null);
             }, function() {
                 castleDialog.dialog('close');
             });
@@ -119,7 +125,7 @@
                 $(this).effect('transfer', {
                     to: waterfallDialog.dialog('widget'),
                     className: 'ui-effects-transfer'
-                }, 500, null);
+                }, 1500, null);
             }, function() {
                 waterfallDialog.dialog('close');
             });
@@ -156,7 +162,7 @@
                 $(this).effect('transfer', {
                     to: forestDialog.dialog('widget'),
                     className: 'ui-effects-transfer'
-                }, 500, null);
+                }, 1500, null);
             }, function() {
                 forestDialog.dialog('close');
             });
