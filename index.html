@@ -14,6 +14,8 @@
 
     <script>
         $(document).ready(function() {
+
+            // START - volcano dialog
             var volcanoDialog = $('#volcano-modal').dialog({
                 draggable: false,
                 dialogClass: "no-close",
@@ -21,7 +23,11 @@
                 height: 700,
                 width: 1500,
                 autoOpen: false,
-                position: { my: "bottom-50", at: "center", of: window },
+                position: {
+                    my: "bottom-50",
+                    at: "center",
+                    of: window
+                },
                 // hook to the 'beforeclose' event instead of 'close'
                 beforeclose: function(event, ui) {
                     volcanoDialog.dialog('widget').effect('transfer', {
@@ -33,7 +39,6 @@
             });
 
             $(".volcanoModal").hover(function() {
-                //in
                 volcanoDialog.dialog('open');
 
                 $(this).effect('transfer', {
@@ -41,9 +46,123 @@
                     className: 'ui-effects-transfer'
                 }, 500, null);
             }, function() {
-                //out
                 volcanoDialog.dialog('close');
             });
+            // END - volcano dialog
+
+
+
+
+            // START - castle dialog
+            var castleDialog = $('#castle-modal').dialog({
+                draggable: false,
+                dialogClass: "no-close",
+                resizable: false,
+                height: 700,
+                width: 1500,
+                autoOpen: false,
+                position: {
+                    my: "bottom-50",
+                    at: "center",
+                    of: window
+                },
+                // hook to the 'beforeclose' event instead of 'close'
+                beforeclose: function(event, ui) {
+                    castleDialog.dialog('widget').effect('transfer', {
+                        to: '.castle',
+                        className: 'ui-effects-transfer'
+                    }, 1500, null);
+                    return true; // to close it
+                }
+            });
+
+            $(".castleModal").hover(function() {
+                castleDialog.dialog('open');
+
+                $(this).effect('transfer', {
+                    to: castleDialog.dialog('widget'),
+                    className: 'ui-effects-transfer'
+                }, 500, null);
+            }, function() {
+                castleDialog.dialog('close');
+            });
+            // END - castle dialog
+
+
+
+            // START - waterfall dialog
+            var waterfallDialog = $('#waterfall-modal').dialog({
+                draggable: false,
+                dialogClass: "no-close",
+                resizable: false,
+                height: 700,
+                width: 1500,
+                autoOpen: false,
+                position: {
+                    my: "bottom-50",
+                    at: "center",
+                    of: window
+                },
+                // hook to the 'beforeclose' event instead of 'close'
+                beforeclose: function(event, ui) {
+                    waterfallDialog.dialog('widget').effect('transfer', {
+                        to: '.waterfall',
+                        className: 'ui-effects-transfer'
+                    }, 1500, null);
+                    return true; // to close it
+                }
+            });
+
+            $(".waterfallModal").hover(function() {
+                waterfallDialog.dialog('open');
+
+                $(this).effect('transfer', {
+                    to: waterfallDialog.dialog('widget'),
+                    className: 'ui-effects-transfer'
+                }, 500, null);
+            }, function() {
+                waterfallDialog.dialog('close');
+            });
+            // END - waterfall dialog
+
+
+
+            // START - forest dialog
+            var forestDialog = $('#forest-modal').dialog({
+                draggable: false,
+                dialogClass: "no-close",
+                resizable: false,
+                height: 700,
+                width: 1500,
+                autoOpen: false,
+                position: {
+                    my: "bottom-50",
+                    at: "center",
+                    of: window
+                },
+                // hook to the 'beforeclose' event instead of 'close'
+                beforeclose: function(event, ui) {
+                    forestDialog.dialog('widget').effect('transfer', {
+                        to: '.forest',
+                        className: 'ui-effects-transfer'
+                    }, 1500, null);
+                    return true; // to close it
+                }
+            });
+
+            $(".forestModal").hover(function() {
+                forestDialog.dialog('open');
+
+                $(this).effect('transfer', {
+                    to: forestDialog.dialog('widget'),
+                    className: 'ui-effects-transfer'
+                }, 500, null);
+            }, function() {
+                forestDialog.dialog('close');
+            });
+            // END - forest dialog
+
+
         });
     </script>
 </head>
@@ -67,18 +186,79 @@
         <p>Urgent Enquiries: 02084116060</p>
     </div>
 
+    <div id="castle-modal" title="Castle Zone (LSS & Employability)">
+        <p>Join us in the CASTLE ZONE to help build on and improve you skills!</p>
+        <br />
+        <p>In the Castle Zone you will find:</p>
+        <ul>
+            <li>The LET</li>
+            <li>SLAs</li>
+            <li>Employability</li>
+            <li>Library Services</li>
+        </ul>
+        <br />
+        <p>Each team will be on hand throughout the festival with advice, tips, games and free gifts to help you achieve your very best with at Middlesex and beyond</p>
+        <br />
+        <h1>Contact details:</h1>
+        <p>Learning Enhancement Team (LET):</p>
+        <p>LET@mdx.ac.uk</p>
+        <p>Numeracy@mdx.ac.uk</p>
+        <p>Library Services:</p>
+        <p>Tel: 020 8411 6060</p>
+
+    </div>
+
+    <div id="waterfall-modal" title="Waterfall Zone (Wellbeing)">
+        <p>Join us in the WATERFALL ZONE to learn more about Counselling & Mental Health, Disability & Dyslexia and Sports & Recreation and how they can help you!</p>
+        <br />
+        <p>In the Waterfall Zone you will find:</p>
+        <ul>
+            <li>• Mindfulness Activities</li>
+            <li>• Advice on mental wellbeing</li>
+            <li>• Support from Disability & Dyslexia and Counseling & Mental Health</li>
+            <li>• Teams from Sports and Recreation</li>
+            <li>• Relaxation and chill out</li>
+        </ul>
+        <br />
+        <p>Representatives from Middlesex Wellbeing services and Sports and Recreation will be on hand throughout the festival with advice, tips, games and free gifts to help you achieve your very best with at Middlesex and beyond!</p>
+        <br />
+        <h1>Contact details:</h1>
+        <p>Counselling and Mental Health</p>
+        <p>counselling@mdx.ac.uk</p>
+        <p>Disbility and Dyslexia</p>
+        <p>Email: disability@mdx.ac.uk</p>
+        <p>Telephone: 020 8411 2502</p>
+    </div>
+
+    <div id="forest-modal" title="Forest Zone (MDXSU)">
+        <p>Join us in the FOREST ZONE to learn more about MDXSU and how they can help you!</p>
+        <br />
+        <p>In the Forest Zone you will find:</p>
+        <ul>
+            <li>• Student Societies</li>
+            <li>• Academic Societies</li>
+            <li>• Help and advice</li>
+        </ul>
+        <br />
+        <p>Representatives from the Union will be on hand throughout the festival with advice, tips, games and free gifts to help you achieve your very best with at Middlesex and beyond!</p>
+        <br />
+        <h1>Contact details:</h1>
+        <p>MDXSU</p>
+        <p>mdxsu@mdx.ac.uk</p>
+    </div>
+
     <div class="bkg">
         <div class="container">
             <div class="volcanoModal">
                 <img class="stamp volcano" src="imgs/volcano_stamp.png">
             </div>
-            <div>
+            <div class="forestModal">
                 <img class="stamp forest" src="imgs/forest_stamp.png">
             </div>
-            <div>
+            <div class="waterfallModal">
                 <img class="stamp waterfall" src="imgs/waterfall_stamp.png">
             </div>
-            <div>
+            <div class="castleModal">
                 <img class="stamp castle" src="imgs/castle_stamp.png">
             </div>
         </div>
