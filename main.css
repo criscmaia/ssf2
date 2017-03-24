@@ -102,7 +102,7 @@ ul {
 
 /* overall style */
 
-#volcano-modal {
+#volcano-modal, #castle-modal, #waterfall-modal, #forest-modal {
     color: #F8F3EE !important;
     background: rgba(0, 0, 0, 0.5);
 }
