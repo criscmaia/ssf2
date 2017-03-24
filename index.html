@@ -16,10 +16,12 @@
         $(document).ready(function() {
             var volcanoDialog = $('#volcano-modal').dialog({
                 draggable: false,
+                dialogClass: "no-close",
                 resizable: false,
-                height: 400,
-                width: 500,
+                height: 700,
+                width: 1500,
                 autoOpen: false,
+                position: { my: "bottom-50", at: "center", of: window },
                 // hook to the 'beforeclose' event instead of 'close'
                 beforeclose: function(event, ui) {
                     volcanoDialog.dialog('widget').effect('transfer', {
@@ -49,8 +51,20 @@
 <body>
 
     <div id="volcano-modal" title="Volcano Zone (Progression and Support, Registry)">
-        <p>Join us in the VOLCANO ZONE to learn more about Progression & Support and Registry and how they can help you! In the Volcano Zone you will find • Help and advice to avoiding 'erupting' with anxiety • Tips on progression • Advice on deferral, academic conduct and MDX rules Representatives from Progression and Support and Registry will be on hand throughout the festival with advice, tips, games and free gifts to help you achieve your very best with at Middlesex and beyond!
-        </p>
+        <p>Join us in the <strong>VOLCANO ZONE</strong> to learn more about Progression & Support and Registry and how they can help you!</p>
+        <br />
+        <p>In the Volcano Zone you will find:</p>
+        <ul>
+            <li>Help and advice to avoiding 'erupting' with anxiety</li>
+            <li>Tips on progression</li>
+            <li>Advice on deferral, academic conduct and MDX rules</li>
+        </ul>
+        <br />
+        <p>Representatives from Progression and Support and Registry will be on hand throughout the festival with advice, tips, games and free gifts to help you achieve your very best with at Middlesex and beyond!</p>
+        <br />
+        <h1>Contact details:</h1>
+        <p>Telephone (Mon - Fri): 02084114423</p>
+        <p>Urgent Enquiries: 02084116060</p>
     </div>
 
     <div class="bkg">
