@@ -12,14 +12,10 @@ body {
 }
 
 .container img {
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
     opacity: 1;
 }
 
 .container:hover img {
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
     opacity: .5;
 }
 
@@ -29,10 +25,10 @@ body {
 
 .stamp {
     width: 800px;
+    position: fixed;
 }
 
 .volcano {
-    position: fixed;
     top: 0;
     right: 0;
     padding-right: 80px;
@@ -40,7 +36,6 @@ body {
 }
 
 .forest {
-    position: fixed;
     top: 0;
     left: 0;
     padding-left: 80px;
@@ -48,7 +43,6 @@ body {
 }
 
 .waterfall {
-    position: fixed;
     bottom: 0;
     left: 0;
     padding-left: 80px;
@@ -56,7 +50,6 @@ body {
 }
 
 .castle {
-    position: fixed;
     bottom: 0;
     right: 0;
     padding-right: 80px;
